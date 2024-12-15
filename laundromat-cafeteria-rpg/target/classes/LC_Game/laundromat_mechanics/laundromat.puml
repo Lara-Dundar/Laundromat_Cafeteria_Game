@@ -1,0 +1,29 @@
+@startuml laundromat
+interface machine {
+
+}
+interface profitable {
+
+}
+class customer {
+
+}
+class washingMachine implements machine {
+
+}
+class dryerMachine implements machine {
+
+}
+class washingCoin implements profitable {
+
+}
+class dryingCoin implements profitable {
+
+}
+class electricity {
+
+}
+class water {
+    
+}
+@enduml
