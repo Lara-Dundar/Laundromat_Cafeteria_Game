@@ -46,7 +46,7 @@ public class source implements DES_Process {
     @Override
     public void execute(int type, double currentTime) {
 		System.out.println("Arrival at time = " + currentTime);
-		customer person = new customer();
+		customer person = new customer(null, null, null);
 		person.stamp(currentTime,"Creation",name);
 		queue.giveCustomer(person);
 		if(meanArrTime > 0) {

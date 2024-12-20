@@ -2,15 +2,24 @@ package LC_Game.laundromat_mechanics;
 
 import java.util.ArrayList;
 
+import LC_Game.laundromat_mechanics.coins.dryingCoin;
+import LC_Game.laundromat_mechanics.coins.washingCoin;
+
 public class customer {
     private ArrayList<Double> times;
 	private ArrayList<String> events;
 	private ArrayList<String> stations;
 
-    public customer() {
+	public dryingCoin dCoin;
+	public washingCoin wCoin;
+	public cycle selectedCycle;
+    public customer(dryingCoin dCoin, washingCoin wCoin, cycle selectedCycle) {
         times = new ArrayList<>();
 		events = new ArrayList<>();
 		stations = new ArrayList<>();
+		this.dCoin = dCoin;
+		this.wCoin = wCoin;
+		this.selectedCycle = selectedCycle;
     }
 
     public void stamp(double time,String event,String station) {
